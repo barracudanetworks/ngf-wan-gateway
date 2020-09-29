@@ -1,0 +1,56 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Barracuda CloudGen WAN Gateway Managed Application API",
+        "description": "API specification for Barracuda CloudGen WAN Gateways Managed Applications on Azure.",
+        "version": "2020-09-23"
+    },
+    "basePath": "/public",
+    "paths": {
+        "/updateNva": {
+            "post": {
+                "operationId": "postUpdateNva",
+                "summary": "Updates the scale unit of the CloudGen WAN Gateway",
+                "description": "",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Scale unit definition to implement.",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ScaleUnit"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "429": {
+                        "description": "Conflict"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ScaleUnit": {
+            "type": "object",
+            "required": ["properties"],
+            "properties": {
+                "properties": {
+                    "type": "object",
+                    "required": ["scaleUnit"],
+                    "properties": {
+                        "scaleUnit": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
