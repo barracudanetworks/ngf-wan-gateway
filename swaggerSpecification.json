@@ -5,7 +5,7 @@
         "description": "API specification for Barracuda CloudGen WAN Gateways Managed Applications on Azure.",
         "version": "2020-09-23"
     },
-    "basePath": "/subscriptions/9c7ebab4-5981-4c1c-a8bf-c1c60162fc34/resourceGroups/mrg-barracuda_cloudgenwan_gateway-p-20200930134435/providers/Microsoft.CustomProviders/resourceProviders/public",
+    "basePath": "/public",
     "paths": {
         "/updateNva": {
             "post": {
